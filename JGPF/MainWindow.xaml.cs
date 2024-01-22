@@ -63,7 +63,7 @@ namespace JGPF
 
             MessageBox.Show("zmieniono pomyslnie priorytet");
         }
-        public void DoStrontGlownej(object sender, RoutedEventArgs e)
+        public void DoStronyGlownej(object sender, RoutedEventArgs e)
         {
             StronaGlowna.Visibility = Visibility.Visible;
             Szczegoly.Visibility = Visibility.Collapsed;
