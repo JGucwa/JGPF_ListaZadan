@@ -7,6 +7,84 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid Visibility="Collapsed">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
 
+            
+
+            <Frame Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="1" Margin="10">
+                <Frame.Effect>
+                    <DropShadowEffect Opacity="120" ShadowDepth="1" Direction="10"/>
+                </Frame.Effect>
+
+            </Frame>
+
+            <Label Margin="10" Content="Szczegóły zadania" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" FontSize="20"/>
+            <Label Margin="10,0,10,0" Content="Nazwa zadania : " Grid.Row="1"/>
+            <Label Margin="10,0,10,0" Content="Data zadania : " Grid.Row="2"/>
+            <Label Margin="10,0,10,0" Content="Priorytet zadania : " Grid.Row="3"/>
+            <Label Margin="10,0,10,0" Content="Opis zadania : " Grid.Row="4"/>
+            <Button Margin="10,10,30,20" Grid.Row="5" Grid.Column="1" Content="Cofnij" Background="Black" Foreground="White"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="10" Content="Dodaj zadanie :" Grid.Row="0" Grid.ColumnSpan="2" Grid.Column="0" FontSize="20"/>
+                <Label Margin="10,0,10,0" Content="Nazwa zadania : " Grid.Row="1"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Height="23"  Margin="10,5,20,5"/>
+                <Label Margin="10,0,10,0" Content="Data zadania : " Grid.Row="2"/>
+                <DatePicker Margin="10,5,20,5" Height="23" Grid.Row="2" Grid.Column="1"/>
+                <Label Margin="10,0,10,0" Content="Priorytet zadania : " Grid.Row="3"/>
+                <ComboBox Grid.Row="3" Height="23" Grid.Column="1" Margin="10,5,20,5">
+                    <ComboBoxItem Content="Niski"/>
+                    <ComboBoxItem Content="Sredni"/>
+                    <ComboBoxItem Content="Wysoki"/>
+                </ComboBox>
+                <Label Margin="10,0,10,0" Content="Opis zadania : " Grid.Row="4"/>
+                <TextBox Grid.Row="4" Height="23" Grid.Column="1" Margin="10,5,20,5"/>
+                <Button Margin="10,10,30,20" Grid.Row="5" Grid.Column="1" Content="Dodaj" Background="Black" Foreground="White"/>
+
+                <Frame Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="Black" BorderThickness="1" Margin="10">
+                    <Frame.Effect>
+                        <DropShadowEffect Opacity="120" ShadowDepth="1" Direction="10"/>
+                    </Frame.Effect>
+
+                </Frame>
+            </Grid>
+            
+
+        </Grid>
     </Grid>
 </Window>
