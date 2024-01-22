@@ -33,5 +33,20 @@ namespace JGPF
             string tekst = JsonConvert.SerializeObject(tmp);
             File.WriteAllText(dbPath, tekst);
         }
+        public void EdytujZadanie(Zadanie zadanie)
+        {
+            List<Zadanie> tmp = WyswietlWszystko();
+
+            for (int i = 0; i < tmp.Count; i++)
+            {
+                if (tmp[i].Id == zadanie.Id)
+                {
+                    tmp[i] = zadanie;
+                }
+            }
+
+            string tekst = JsonConvert.SerializeObject(tmp);
+            File.WriteAllText(dbPath, tekst);
+        }
     }
 }
