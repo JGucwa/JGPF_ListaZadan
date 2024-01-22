@@ -43,5 +43,19 @@ namespace JGPF
                 MessageBox.Show("Dane sa bledne");
             }
         }
+        Zadanie ZaznaczoneZadanie = null;
+        public void WyswietlOpis(object sender, RoutedEventArgs e)
+        {
+            StronaGlowna.Visibility = Visibility.Collapsed;
+            Szczegoly.Visibility = Visibility.Visible;
+
+            if (sender is FrameworkElement element && element.DataContext is object pozycja)
+            {
+                int indeks = Lista.Items.Count - 1 - Lista.Items.IndexOf(pozycja);
+                ZaznaczoneZadanie = new Database().WyswietlWszystko()[indeks];
+            }
+            Szczegoly.DataContext = ZaznaczoneZadanie;
+        }
+
     }
 }
