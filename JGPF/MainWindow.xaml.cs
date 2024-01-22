@@ -56,6 +56,12 @@ namespace JGPF
             }
             Szczegoly.DataContext = ZaznaczoneZadanie;
         }
+        public void ZmienPriorytet(object sender, RoutedEventArgs e)
+        {
+            ZaznaczoneZadanie.Priorytet = NowyPriorytet.Text;
+            new Database().EdytujZadanie(ZaznaczoneZadanie);
 
+            MessageBox.Show("zmieniono pomyslnie priorytet");
+        }
     }
 }
