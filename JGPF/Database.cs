@@ -30,6 +30,8 @@ namespace JGPF
 
             if (tmp.Count > 0) zadanie.Id = tmp[tmp.Count - 1].Id; else zadanie.Id = 0;
 
+            tmp.Add(zadanie);
+
             string tekst = JsonConvert.SerializeObject(tmp);
             File.WriteAllText(dbPath, tekst);
         }
